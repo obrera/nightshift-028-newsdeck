@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(67, 56, 202, 0.28), transparent 30%),
+    radial-gradient(circle at right, rgba(14, 165, 233, 0.16), transparent 24%),
+    linear-gradient(180deg, #09090f 0%, #05070c 100%);
+  color: #edf4ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(67, 56, 202, 0.28), transparent 30%),
+    radial-gradient(circle at right, rgba(14, 165, 233, 0.16), transparent 24%),
+    linear-gradient(180deg, #09090f 0%, #05070c 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@theme {
+  --color-ink-950: #05070c;
+  --color-ink-900: #0b1020;
+  --color-ink-850: #10182b;
+  --color-ink-800: #172036;
+  --color-line: rgba(162, 193, 255, 0.16);
+  --color-line-strong: rgba(162, 193, 255, 0.28);
+  --color-copy-dim: #93a4c4;
+  --color-copy-soft: #c8d7f2;
+  --color-accent: #7dd3fc;
+  --color-accent-strong: #38bdf8;
+  --color-hot: #f97316;
+  --color-good: #22c55e;
+}
+
+@layer utilities {
+  .panel-surface {
+    @apply border border-line bg-white/5 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl;
+  }
+
+  .focus-ring {
+    @apply outline-none ring-0 focus-visible:border-accent-strong focus-visible:ring-2 focus-visible:ring-accent-strong/40;
+  }
+}
+
